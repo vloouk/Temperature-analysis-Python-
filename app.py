@@ -15,6 +15,8 @@ def about():
 
 @app.route('/index', methods=['GET', 'POST'])
 def index():
+    
+#странные делишки
     if 'file' in request.files:
         file = request.files['file']
         if file:
@@ -43,6 +45,7 @@ def button():
     if not adress or not os.path.exists(adress):
         return render_template('about.html')
 
+#странные делишки подумай о имени переменных
     a = datetime.strptime(a, '%Y-%m-%d')
     b = datetime.strptime(b, '%Y-%m-%d')
 
@@ -85,6 +88,7 @@ def button():
 def anym(a, b, adress):
     rad1, rad2, rad3 = [], [], []
 
+#странные делишки файлики гг
     with open(adress, 'r', encoding='utf-8') as my_file:
         lines = my_file.readlines()
         if not lines:
@@ -107,6 +111,7 @@ def anym(a, b, adress):
     a = a_date.strftime('%d.%m.%Y')
     b = b_date.strftime('%d.%m.%Y')
 
+#странные делишки не сохраняем гг
     with open(adress, 'r', encoding='utf-8') as my_file:
         for line in my_file.readlines():
             if a in line[:10]:
@@ -126,6 +131,3 @@ def anym(a, b, adress):
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-
-
