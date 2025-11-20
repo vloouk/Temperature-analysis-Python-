@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" action="/">
+        <button type="submit">Назад к выбору файла</button>
+    </form>
+    <form method="post" action="/second">
+        <div>
+            <input type="hidden" name="file_adress" value="{{ full_path }}">
+        </div>
+        <div>
+            <p>Выберите дату начала</p>
+            <label for="date1"></label>
+            <input type="date" id="date1" name="data_one">
+        </div>
+        <div>
+            <p>Выберите дату окончания:</p>
+            <label for="date2"></label>
+            <input type="date" id="date2" name="data_two">
+        </div>
+    <p></p>
+    <button type="submit">Построить график</button>
+    </form>
+</body>
+</html>
