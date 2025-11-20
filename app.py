@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def about():
-    return render_template('about.html')
+    return render_template('./about.html')
 
 
 @app.route('/index', methods=['GET', 'POST'])
